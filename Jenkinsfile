@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('Plan') {
             steps {
-                sh 'terraform plan'
+                sh '''
+                    terraform init
+                    terraform plan
+                '''
             }
         }
 
