@@ -5,6 +5,7 @@ pipeline {
         stage('Plan') {
             steps {
                 sh '''
+                    ls
                     terraform init -upgrade
                     terraform plan
                 '''
