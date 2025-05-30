@@ -5,8 +5,7 @@ pipeline {
         stage('Plan') {
             steps {
                 sh '''
-                    terraform init -upgrade
-                    terraform plan -out
+                    terraform plan
                 '''
             }
         }
