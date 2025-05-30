@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sh '''
                     terraform plan
+                    y
                 '''
             }
         }
