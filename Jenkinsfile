@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh '''
                     terraform init -upgrade
-                    terraform plan -o
+                    terraform plan -out
                 '''
             }
         }
