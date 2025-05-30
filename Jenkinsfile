@@ -5,17 +5,17 @@ pipeline {
         stage('Plan') {
             steps {
                 sh '''
-                    rm .terraform.lock.hcl
-                    ls -la
                     terraform init -upgrade
-                    terraform plan
+                    terraform plan -o
                 '''
             }
         }
 
         stage('Apply') {
             steps {
-                echo 'Hello World2'
+                sh '''
+                    terraform apply
+                '''
             }
         }
     }
