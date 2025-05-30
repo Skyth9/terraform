@@ -13,8 +13,7 @@ pipeline {
         stage('Apply') {
             steps {
                 sh '''
-                    terraform apply
-                    y
+                    terraform apply -auto-approve
                 '''
             }
         }
