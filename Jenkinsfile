@@ -5,7 +5,6 @@ pipeline {
         stage('Plan') {
             steps {
                 sh '''
-                    rm .terraform
                     rm .terraform.lock.hcl
                     ls -la
                     terraform init -upgrade
