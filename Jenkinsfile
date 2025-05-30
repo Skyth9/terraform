@@ -2,7 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Plan') {
+            steps {
+                sh 'terraform plan'
+            }
+        }
+
+        stage('Apply') {
             steps {
                 echo 'Hello World'
             }
