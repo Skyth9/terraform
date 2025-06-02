@@ -5,12 +5,6 @@ pipeline {
         stage('Plan') {
             steps {
                 sh '''
-                    steps:
-                      - shell: bash
-                        env:
-                          SUPER_SECRET: ${{ secrets.SuperSecret }}
-                        run: |
-                          example-command "$SUPER_SECRET"
                     ls -la
                     terraform plan -out plan.tf
                 '''
