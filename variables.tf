@@ -12,7 +12,7 @@ variable "resource_group_name_prefix" {
 
 variable "RG" {
     type      = string
-    default   = "1-ed69a3f6-playground-sandbox"
+    default   = "1-4e381774-playground-sandbox"
 }
 
 variable "username" {

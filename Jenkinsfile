@@ -5,7 +5,8 @@ pipeline {
         stage('Plan') {
             steps {
                 sh '''
-                    terraform plan
+                    ls la
+                    terraform plan -out plan.tf
                 '''
             }
         }
